@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<aside th:fragment="leftSidebar" class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <!-- User Profile-->
+                <li>
+                    <!-- User Profile-->
+                    <div class="user-profile dropdown m-t-20">
+                        <div class="user-pic">
+                            <img th:src="@{/admin/assets/images/users/1.jpg}" alt="users" class="rounded-circle img-fluid" />
+                        </div>
+                        <div class="user-content hide-menu m-t-10">
+                            <h5 class="m-b-10 user-name font-medium">Steave Jobs</h5>
+                            <a th:href="@{javascript:void(0)}" class="btn btn-circle btn-sm m-r-5" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                <i class="ti-settings"></i>
+                            </a>
+                            <a th:href="@{javascript:void(0)}" title="Logout" class="btn btn-circle btn-sm">
+                                <i class="ti-power-off"></i>
+                            </a>
+                            <div class="dropdown-menu animated flipInY" aria-labelledby="Userdd">
+                                <a class="dropdown-item" th:href="@{javascript:void(0)}">
+                                    <i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                                <a class="dropdown-item" th:href="@{javascript:void(0)}">
+                                    <i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
+                                <a class="dropdown-item" th:href="@{javascript:void(0)}">
+                                    <i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" th:href="@{javascript:void(0)}">
+                                    <i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" th:href="@{javascript:void(0)}">
+                                    <i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End User Profile-->
+                </li>
+                <!-- User Profile-->
+                <!--Dashboards-->
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" th:href="@{javascript:void(0)}" aria-expanded="false">
+                        <i class="icon-Car-Wheel"></i>
+                        <span class="hide-menu">Dashboards </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse  first-level">
+                        <li class="sidebar-item">
+                            <a th:href="@{/admin}" class="sidebar-link">
+                                <i class="icon-Record"></i>
+                                <span class="hide-menu"> Dashboard 1 </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!--E-commerce Pages-->
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                        <i class="icon-Shopping-Bag"></i>
+                        <span class="hide-menu">E-commerce Pages</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a th:href="@{/admin/products}" class="sidebar-link">
+                                <i class="mdi mdi-cart-plus"></i>
+                                <span class="hide-menu">Products</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/admin/product/create}" class="sidebar-link">
+                                <i class="mdi mdi-cart-plus"></i>
+                                <span class="hide-menu">Products Edit</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/admin/products-detail}" class="sidebar-link">
+                                <i class="mdi mdi-camera-burst"></i>
+                                <span class="hide-menu">Product Details</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!--Invoice-->
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)
+                                   " aria-expanded="false">
+                        <i class="icon-Receipt-3"></i>
+                        <span class="hide-menu">Invoice</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a href="pages-invoice.html" class="sidebar-link">
+                                <i class="mdi mdi-vector-triangle"></i>
+                                <span class="hide-menu"> Invoice Layout </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="pages-invoice-list.html" class="sidebar-link">
+                                <i class="mdi mdi-vector-rectangle"></i>
+                                <span class="hide-menu"> Invoice List</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!--Users-->
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)
+                                   " aria-expanded="false">
+                        <i class="icon-Administrator"></i>
+                        <span class="hide-menu">Users</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a th:href="@{/admin/users}"  class="sidebar-link">
+                                <i class="mdi mdi-account-key"></i>
+                                <span class="hide-menu"> Users List </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/admin/user/create}" class="sidebar-link">
+                                <i class="mdi mdi-account-key"></i>
+                                <span class="hide-menu"> Registration </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/login}" class="sidebar-link">
+                                <i class="mdi mdi-account-off"></i>
+                                <span class="hide-menu"> Lockscreen</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+</aside>
+</body>
+</html>

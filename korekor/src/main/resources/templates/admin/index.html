@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="admin/fragments/head :: head"></head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header th:replace="admin/fragments/header :: topbarHeader"></header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside th:replace="admin/fragments/sidebar :: leftSidebar"></aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer th:replace="admin/fragments/footer :: footer"></footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- customizer Panel -->
+    <!-- ============================================================== -->
+    <aside th:replace="admin/fragments/customizerPanel :: customizerPanel"></aside>
+    <div class="chat-windows"></div>
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script th:src="@{/admin/assets/libs/jquery/dist/jquery.min.js}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script th:src="@{/admin/assets/libs/popper.js/dist/umd/popper.min.js}"></script>
+    <script th:src="@{/admin/assets/libs/bootstrap/dist/js/bootstrap.min.js}"></script>
+    <!-- apps -->
+    <script th:src="@{/admin/dist/js/app.min.js}"></script>
+    <script th:src="@{/admin/dist/js/app.init.js}"></script>
+    <script th:src="@{/admin/dist/js/app-style-switcher.js}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script th:src="@{/admin/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js}"></script>
+    <script th:src="@{/admin/assets/extra-libs/sparkline/sparkline.js}"></script>
+    <!--Wave Effects -->
+    <script th:src="@{/admin/dist/js/waves.js}"></script>
+    <!--Menu sidebar -->
+    <script th:src="@{/admin/dist/js/sidebarmenu.js}"></script>
+    <!--Custom JavaScript -->
+    <script th:src="@{/admin/dist/js/custom.min.js}"></script>
+    <!--This page JavaScript -->
+    <!--chartis chart-->
+    <script th:src="@{/admin/assets/libs/chartist/dist/chartist.min.js}"></script>
+    <script th:src="@{/admin/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js}"></script>
+    <!--c3 charts -->
+    <script th:src="@{/admin/assets/extra-libs/c3/d3.min.js}"></script>
+    <script th:src="@{/admin/assets/extra-libs/c3/c3.min.js}"></script>
+    <!--chartjs -->
+    <script th:src="@{/admin/assets/libs/raphael/raphael.min.js}"></script>
+    <script th:src="@{/admin/assets/libs/morris.js/morris.min.js}"></script>
+
+    <script th:src="@{/admin/dist/js/pages/dashboards/dashboard1.js}"></script>
+</body>
+</html>
